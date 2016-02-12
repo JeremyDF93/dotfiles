@@ -1,7 +1,9 @@
+#compdef y=yaourt
 y() {
     yaourt "$@";
 }
 
+compdef p=pacman
 p() {
     sudo pacman "$@";
 }
