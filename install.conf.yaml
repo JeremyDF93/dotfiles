@@ -1,5 +1,6 @@
 - clean: ['~']
 - link:
+    ~/.zsh: zsh/
     ~/.zshrc: zshrc
     ~/.zprofile: zprofile
     ~/.vim: vim/

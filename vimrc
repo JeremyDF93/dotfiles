@@ -15,6 +15,7 @@ set softtabstop=4
 set autoindent
 
 " theme
+set t_Co=256
 colorscheme molokai
 
 " powerline

@@ -1,73 +1,15 @@
-# Created by newuser for 5.2
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# settings
+source ~/.zsh/settings.zsh
 
-PROMPT='%(!.%F{red}.%F{yellow})%n%F{default}:%F{blue}%~%F{green}%(!.#.$)%F{default} '
-TERM='screen-256color'
+# aliases
+source ~/.zsh/aliases.zsh
 
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE=~/.zsh_history
-setopt APPEND_HISTORY
-setopt HIST_IGNORE_DUPS
+# functions
+source ~/.zsh/functions.zsh
 
-bindkey "${terminfo[khome]}" beginning-of-line
-bindkey "${terminfo[kend]}" end-of-line
+# prompt
+source ~/.zsh/prompt.zsh
 
-autoload -U compinit
-compinit
-#setopt completealiases
-
-alias ls='ls -lhX --color=auto --group-directories-first'
-alias grep='grep -n --color=auto'
-alias rebash='source ~/.bashrc'
-alias emptyswap='sudo swapoff -a && sudo swapon -a && echo ":: Done"'
-
-y() {
-  yaourt "$@";
-}
-
-p() {
-  sudo pacman "$@";
-}
-
-fn() {
-  local name="$1"
-  shift
-  find . -iname "*$name*" "$@"
-}
-
-gr() {
-  grep -r "$@" .
-}
-
-lsvpk() {
-  find . -type f -name "*_dir.vpk" -exec vpk l "{}" \;
-}
-
-luna() {
-  curl -F "f=@$1" -F "l=1" https://luna.punked.us/
-}
-
-lunas() {
-  curl -F "s=$@" https://luna.punked.us/
-}
-
-dos2unix() {
-  sed -i $'s/\r$//' "$@"
-}
-
-ssu() {
-  sudo -u ${1:-root} -i
-}
-
-man() {
-  env LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-  LESS_TERMCAP_md=$(printf "\e[1;31m") \
-  LESS_TERMCAP_me=$(printf "\e[0m") \
-  LESS_TERMCAP_se=$(printf "\e[0m") \
-  LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-  LESS_TERMCAP_ue=$(printf "\e[0m") \
-  LESS_TERMCAP_us=$(printf "\e[1;32m") \
-  man "$@"
-}
+# syntax highlighting
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
