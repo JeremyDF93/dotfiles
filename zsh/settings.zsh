@@ -7,6 +7,8 @@ HISTFILE=~/.zsh_history
 setopt APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
 
+export VISUAL="vim"
+
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
 
