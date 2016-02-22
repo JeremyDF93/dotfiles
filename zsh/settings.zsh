@@ -1,6 +1,12 @@
 # auto completion
 autoload -Uz compinit && compinit
 
+setopt completeinword
+setopt histverify
+
+# Tab completion should be case-insensitive.
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
