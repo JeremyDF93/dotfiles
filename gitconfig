@@ -1,0 +1,7 @@
+[user]
+	email = jeremydf93@hotmail.com
+	name = Jeremy Farmer
+[push]
+	default = simple
+[core]
+	editor = vim
