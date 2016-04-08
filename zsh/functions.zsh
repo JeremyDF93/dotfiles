@@ -23,15 +23,21 @@ lsvpk() {
 }
 
 luna() {
-    curl -F "f=@$1" -F "l=1" https://luna.punked.us/
-}
+    #curl -F "f=@$1" -F "l=1" https://luna.punked.us/
+    scp "$@" jeremy@luna.punked.us:/var/www/luna.punked.us/public/scp/
 
-lunas() {
-    curl -F "s=$@" https://luna.punked.us/
+    for file in "$@"
+    do
+        echo "https://luna.punked.us/scp/$(basename $file)"
+    done
 }
 
 dos2unix() {
     sed -i $'s/\r$//' "$@"
+}
+
+wine32() {
+    WINEARCH=win32 WINEPREFIX=~/.wine32 wine "$@"
 }
 
 ssu() {
