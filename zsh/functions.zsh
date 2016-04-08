@@ -1,13 +1,3 @@
-#compdef y=yaourt
-y() {
-    yaourt "$@";
-}
-
-compdef p=pacman
-p() {
-    sudo pacman "$@";
-}
-
 fn() {
     local name="$1"
     shift
