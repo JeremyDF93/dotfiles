@@ -1,0 +1,23 @@
+[
+  {
+    "clean": ["~"]
+  },
+  {
+    "link": {
+      "~/.zsh": "zsh/",
+      "~/.zshrc": "zshrc",
+      "~/.zprofile": "zprofile",
+      "~/.vim": "vim/",
+      "~/.vimrc": "vimrc",
+      "~/.tmux.conf": "tmux.conf",
+      "~/.gitconfig": "gitconfig",
+      "~/.config/powerline": "config/powerline/"
+    }
+  },
+  {
+    "shell": [
+      ["git submodule update --init --recursive", "Installing submodules"],
+      ["pip install --user powerline-status", "Installing Powerline"]
+    ]
+  }
+]
