@@ -22,6 +22,10 @@ lsvpk() {
     find . -type f -name "*_dir.vpk" -exec vpk l "{}" \;
 }
 
+#steam() {
+#    LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so.1 /usr/$LIB/libgpg-error.so' /usr/bin/steam "$@"
+#}
+
 luna() {
     #curl -F "f=@$1" -F "l=1" https://luna.punked.us/
     scp "$@" jeremy@luna.punked.us:/var/www/luna.punked.us/public/scp/
