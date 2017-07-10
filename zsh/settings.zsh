@@ -14,7 +14,7 @@ setopt APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
 
 export VISUAL="vim"
-export TERM="screen-256color"
+export TERM="xterm-256color"
 
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
