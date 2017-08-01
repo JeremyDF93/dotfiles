@@ -28,7 +28,7 @@ lsvpk() {
 
 luna() {
     #curl -F "f=@$1" -F "l=1" https://luna.punked.us/
-    scp "$@" jeremy@luna.punked.us:/var/www/luna.punked.us/public/scp/
+    scp "$@" jeremy@luna.punked.us:/home/jeremy/public/scp/
 
     for file in "$@"
     do
