@@ -13,6 +13,3 @@ if [ -d "$HOME/.local/lib/python3.5/site-packages" ] ; then
     export PYTHONPATH="$HOME/.local/lib/python3.5/site-packages:$PYTHONPATH"
 fi
 
-# set steam env
-export STEAM_FRAME_FORCE_CLOSE=1
-
