@@ -11,3 +11,6 @@ fi
 # set steam env
 export STEAM_FRAME_FORCE_CLOSE=1
 
+#fix kwin shit
+export KWIN_TRIPLE_BUFFER=1
+
