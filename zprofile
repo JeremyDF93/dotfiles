@@ -9,7 +9,7 @@ if [ -d "$HOME/.local/lib" ] ; then
 fi
 
 # set PYTHONPATH so it includes user's private module if it exists
-if [ -d "$HOME/.local/lib/python3.5/site-packages" ] ; then
-    export PYTHONPATH="$HOME/.local/lib/python3.5/site-packages:$PYTHONPATH"
+if [ -d "$HOME/.local/lib/python2.7/site-packages" ] ; then
+    export PYTHONPATH="$HOME/.local/lib/python2.7/site-packages:$PYTHONPATH"
 fi
 
