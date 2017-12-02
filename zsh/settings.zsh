@@ -8,7 +8,7 @@ setopt histverify
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # pure
-fpath+=('/home/jeremy/.local/lib/node_modules/pure-prompt/functions')
+fpath+=("$HOME/.local/lib/node_modules/pure-prompt/functions")
 
 HISTSIZE=10000
 SAVEHIST=10000
