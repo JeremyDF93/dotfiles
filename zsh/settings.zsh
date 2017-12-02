@@ -7,6 +7,9 @@ setopt histverify
 # Tab completion should be case-insensitive.
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
+# pure
+fpath+=('/home/jeremy/.local/lib/node_modules/pure-prompt/functions')
+
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
@@ -18,4 +21,3 @@ export TERM="xterm-256color"
 
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
-
