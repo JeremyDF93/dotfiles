@@ -14,7 +14,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 setopt APPEND_HISTORY
-setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
 
 export VISUAL="vim"
 export TERM="xterm-256color"
