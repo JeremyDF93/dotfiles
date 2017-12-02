@@ -8,9 +8,11 @@ if [ -d "$HOME/.local/lib" ] ; then
     export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
 fi
 
+#npm config set prefix ${HOME}/.local
+export NPM_CONFIG_PREFIX="$HOME/.local"
+
 # set steam env
 export STEAM_FRAME_FORCE_CLOSE=1
 
 #fix kwin shit
 export KWIN_TRIPLE_BUFFER=1
-
