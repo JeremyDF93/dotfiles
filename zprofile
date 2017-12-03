@@ -3,6 +3,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Rust's package manager private bin path
+if [ -d "$HOME/.cargo/bin" ] ; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
 # set LD_LIBRARY_PATH so it includes user's private lib if it exists
 if [ -d "$HOME/.local/lib" ] ; then
     export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
