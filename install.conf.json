@@ -19,7 +19,8 @@
     "shell": [
       ["git submodule update --init --recursive", "Installing submodules"],
       ["pip install --user powerline-status", "Installing Powerline"],
-      ["npm install --global pure-prompt"]
+      ["npm install --global pure-prompt", "Installing Pure"],
+      ["cargo install exa", "Installing exa"]
     ]
   }
 ]
