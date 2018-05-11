@@ -15,13 +15,8 @@
   },
   {
     "shell": [
-<<<<<<< HEAD
-      ["git submodule update --init --recursive", "Installing submodules"]
-=======
       ["git submodule update --init --recursive", "Installing submodules"],
-      ["pip install --user powerline-status", "Installing Powerline"],
       ["npm install --global pure-prompt"]
->>>>>>> afebcbe... update install script
     ]
   }
 ]
