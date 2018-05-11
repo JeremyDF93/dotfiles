@@ -10,7 +10,8 @@
       "~/.vim": "vim/",
       "~/.vimrc": "vimrc",
       "~/.tmux.conf": "tmux.conf",
-      "~/.gitconfig": "gitconfig"
+      "~/.gitconfig": "gitconfig",
+      "~/.npmrc": "npmrc"
     }
   },
   {
