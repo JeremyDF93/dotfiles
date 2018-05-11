@@ -1,6 +1,6 @@
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
-    export PATH="$HOME/.local/bin:$PATH"
+    export PATH="$HOME/.local/bin:$HOME/.gem/ruby/2.0.0/bin:$PATH"
 fi
 
 # set LD_LIBRARY_PATH so it includes user's private lib if it exists
