@@ -1,4 +1,6 @@
 # auto completion
+fpath+=("$HOME/.local/lib/node_modules/pure-prompt/functions")
+fpath+=("$HOME/.local/share/zsh/site-functions")
 autoload -Uz compinit && compinit
 
 setopt completeinword
@@ -6,10 +8,6 @@ setopt histverify
 
 # Tab completion should be case-insensitive.
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-
-# pure
-fpath+=("$HOME/.local/lib/node_modules/pure-prompt/functions")
-fpath+=("$HOME/.local/share/zsh/site-functions")
 
 HISTSIZE=10000
 SAVEHIST=10000
