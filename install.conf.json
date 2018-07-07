@@ -12,7 +12,8 @@
       "~/.tmux.conf": "tmux.conf",
       "~/.gitconfig": "gitconfig",
       "~/.config/powerline": "config/powerline/",
-      "~/.config/fontconfig": "config/fontconfig/"
+      "~/.config/fontconfig": "config/fontconfig/",
+      "~/.config/yay": "config/yay/"
     }
   },
   {
