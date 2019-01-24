@@ -13,8 +13,10 @@ if [ -d "$HOME/.local/lib" ] ; then
     export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
 fi
 
-PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
-export GEM_HOME=$HOME/.gem
+if [ -f "/usr/bin/ruby" ] ; then
+    PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+    export GEM_HOME=$HOME/.gem
+fi
 
 #npm config set prefix ${HOME}/.local
 export NPM_CONFIG_PREFIX="$HOME/.local"
