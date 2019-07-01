@@ -8,6 +8,10 @@ p() {
     sudo pacman "$@";
 }
 
+popt() {
+    p -S --needed --asdeps $(expac -S '%o' "$@")
+}
+
 fn() {
     local name="$1"
     shift
@@ -28,11 +32,11 @@ lsvpk() {
 
 luna() {
     #curl -F "f=@$1" -F "l=1" https://luna.punked.us/
-    scp -r "$@" jeremy@luna.punked.us:/home/jeremy/public/scp/
+    scp -r "$@" jeremy@praisethemoon.com:/home/jeremy/apps/praisethemoon/public/scp/
 
     for file in "$@"
     do
-        echo "https://luna.punked.us/scp/$(basename $file)"
+        echo "https://praisethemoon.com/scp/$(basename $file)"
     done
 }
 
