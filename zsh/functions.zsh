@@ -32,11 +32,12 @@ lsvpk() {
 
 luna() {
     #curl -F "f=@$1" -F "l=1" https://luna.punked.us/
-    scp -r "$@" jeremy@praisethemoon.com:/home/jeremy/apps/praisethemoon/public/scp/
+    scp -r "$@" jeremy@praisethemoon.com:/home/jeremy/apps/praisethemoon/public/scp/${str}
 
     for file in "$@"
     do
-        echo "https://praisethemoon.com/scp/$(basename $file)"
+        str="${$(basename $file)// /%20}"
+        echo "https://praisethemoon.com/scp/${str}"
     done
 }
 
