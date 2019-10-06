@@ -10,11 +10,12 @@ gr() {
 
 luna() {
     #curl -F "f=@$1" -F "l=1" https://luna.punked.us/
-    scp "$@" jeremy@luna.punked.us:/home/jeremy/public/scp/
+    scp "$@" jeremy@praisethemoon.com:/home/jeremy/apps/raccoongirl/public/scp/
 
     for file in "$@"
     do
-        echo "https://luna.punked.us/scp/$(basename $file)"
+        str="${$(basename $file)// /%20}"
+        echo "https://praisethemoon.com/scp/${str}"
     done
 }
 
