@@ -21,9 +21,8 @@
   {
     "shell": [
       ["git submodule update --init --recursive", "Installing submodules"],
-      ["pip install --user powerline-status", "Installing Powerline"],
-      ["npm install --global pure-prompt", "Installing Pure"],
-      ["cargo install exa", "Installing exa"]
+      ["sudo pacman --noconfirm -S powerline", "Installing Powerline"],
+      ["sudo pacman --noconfirm -S exa", "Installing exa"]
     ]
   }
 ]
