@@ -1,7 +1,28 @@
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
 
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
-export PYTHONPATH="$HOME/.local/lib/python2.7/site-packages:$PYTHONPATH"
+# Rust's package manager private bin path
+if [ -d "$HOME/.cargo/bin" ] ; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
+# set LD_LIBRARY_PATH so it includes user's private lib if it exists
+if [ -d "$HOME/.local/lib" ] ; then
+    export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
+fi
+
+if [ -f "/usr/bin/ruby" ] ; then
+    PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+    export GEM_HOME=$HOME/.gem
+fi
+
+#npm config set prefix ${HOME}/.local
 export NPM_CONFIG_PREFIX="$HOME/.local"
+
+# set steam env
+export STEAM_FRAME_FORCE_CLOSE=1
+
+#fix kwin nvidia shit
+#export KWIN_TRIPLE_BUFFER=1

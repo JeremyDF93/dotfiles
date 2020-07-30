@@ -9,6 +9,7 @@
       "~/.zprofile": "zprofile",
       "~/.vim": "vim/",
       "~/.vimrc": "vimrc",
+      "~/.tmux": "tmux/",
       "~/.tmux.conf": "tmux.conf",
       "~/.gitconfig": "gitconfig",
       "~/.npmrc": "npmrc"
