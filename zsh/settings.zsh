@@ -1,7 +1,7 @@
 # auto completion
 fpath+=("$HOME/.local/lib/node_modules/pure-prompt/functions")
 fpath+=("$HOME/.local/share/zsh/site-functions")
-fpath+=("$HOME/.dotfiles/zsh/site-functions/zsh-completions/src")
+fpath+=("$HOME/.zsh/site-functions/zsh-completions/src")
 
 plugins=(… zsh-completions)
 autoload -Uz compinit && compinit
