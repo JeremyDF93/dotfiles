@@ -10,21 +10,17 @@ gr() {
 
 luna() {
     #curl -F "f=@$1" -F "l=1" https://luna.punked.us/
-    scp -r "$@" jeremy@praisethemoon.com:/home/jeremy/apps/praisethemoon/public/scp/
+    scp -r "$@" debian@praisethemoon.com:/home/jeremy/apps/booru/public/files/
 
     for file in "$@"
     do
         str="${$(basename $file)// /%20}"
-        echo "https://praisethemoon.com/scp/${str}"
+        echo "https://static.praisethemoon.com/files/${str}"
     done
 }
 
 dos2unix() {
     sed -i $'s/\r$//' "$@"
-}
-
-wine32() {
-    WINEARCH=win32 WINEPREFIX=~/.wine32 wine "$@"
 }
 
 ssu() {
