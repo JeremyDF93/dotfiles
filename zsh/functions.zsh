@@ -10,7 +10,7 @@ gr() {
 
 luna() {
     #curl -F "f=@$1" -F "l=1" https://luna.punked.us/
-    scp -r "$@" debian@praisethemoon.com:/home/jeremy/apps/booru/public/files/
+    scp -r "$@" debian@praisethemoon.com:/home/debian/apps/booru/public/files/
 
     for file in "$@"
     do
