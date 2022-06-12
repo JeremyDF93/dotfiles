@@ -1,0 +1,18 @@
+Host *
+    ControlMaster auto
+    ControlPath ~/.ssh/master-%r@%h:%p
+    ConnectTimeout 10
+    ControlPersist 600
+    # kill dead connections
+    ServerAliveInterval 5
+    ServerAliveCountMax 3
+    TCPKeepAlive yes
+
+Host github.com
+    HostName github.com
+    Port 22
+
+Host bitbucket.org
+    HostName bitbucket.org
+    Port 22
+
