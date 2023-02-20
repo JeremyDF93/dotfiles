@@ -22,7 +22,9 @@
     "shell": [
       ["git submodule update --init --recursive", "Installing submodules"],
       ["sudo pacman --noconfirm -S powerline", "Installing Powerline"],
-      ["sudo pacman --noconfirm -S exa", "Installing exa"]
+      ["sudo pacman --noconfirm -S exa", "Installing exa"],
+      ["sudo pacman --noconfirm -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si", "Installing Yay"],
+      ["sudo yay --noconfirm -S zsh-pure-prompt", "Installing Pure Prompt"]
     ]
   }
 ]

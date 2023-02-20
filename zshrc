@@ -10,6 +10,8 @@ source ~/.zsh/functions.zsh
 # prompt
 source ~/.zsh/prompt.zsh
 
+source ~/.zsh/key-bindings.zsh
+
 # fortune
 #if [ -x /usr/bin/fortune ] ; then
 #    echo
