@@ -18,6 +18,10 @@ if [ -f "/usr/bin/ruby" ] ; then
     export GEM_HOME=$HOME/.gem
 fi
 
+if [ -d "/opt/cuda/lib64" ] ; then
+    export PYTHONPATH="${PYTHONPATH}:/opt/cuda/lib64"
+fi
+
 #npm config set prefix ${HOME}/.local
 export NPM_CONFIG_PREFIX="$HOME/.local"
 
@@ -26,3 +30,4 @@ export STEAM_FRAME_FORCE_CLOSE=1
 
 #fix kwin nvidia shit
 #export KWIN_TRIPLE_BUFFER=1
+

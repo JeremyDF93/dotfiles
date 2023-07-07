@@ -1,9 +1,9 @@
 # auto completion
-plugins=(… zsh-completions)
 autoload -Uz compinit && compinit
 
 # syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 setopt completeinword
 setopt histverify
@@ -22,4 +22,6 @@ setopt COMPLETE_ALIASES
 
 export VISUAL="vim"
 export TERM="xterm-256color"
+
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
